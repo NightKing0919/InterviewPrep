@@ -9,10 +9,9 @@ public class kadane {
         int max = 0;
         int temp = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            temp = temp + arr[i];
+        for (int x : arr) {
+            temp = temp + x;
             temp = Math.max(temp, 0);
-
             max = Math.max(temp, max);
         }
         return max;
