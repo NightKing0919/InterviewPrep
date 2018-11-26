@@ -1,9 +1,11 @@
-import Arrays.kadane;
+import Algorithms.UnionFind.QuickFindUF;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] a = {-2, -3, 4, -1, -2, 1, 5, -3};
-        System.out.println(kadane.maxSumInArray(a));
+
+        QuickFindUF uf=new QuickFindUF(4);
+        uf.union(0,1);uf.union(2,3);
+        System.out.println(uf.connected(0,0));
     }
 }
